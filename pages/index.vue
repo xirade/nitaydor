@@ -1,7 +1,9 @@
 <template>
-  <Home dir="rtl" />
+    <Home dir="rtl" />
 </template>
 
-<script>
-export default {}
-</script>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
