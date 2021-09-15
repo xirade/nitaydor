@@ -181,7 +181,7 @@
               <div class="mt-3 md:mt-0">
                 <a
                   target="_blank"
-                  href="https://m.facebook.com/nitay.dor"
+                  href="https://facebook.com/nitay.dor"
                   class=" p-2 border-2 border-gray-700 transition duration-500 ease-in-out hover:bg-gray-800 font-semibold text-white inline-flex items-center space-x-2"
                 >
                   <svg
