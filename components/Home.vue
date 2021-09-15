@@ -278,7 +278,7 @@
         </nav>
       </footer>
       <a
-        href="tel:052535788"
+        href="tel:0525357888"
         class="block w-14 h-14 transition duration-500 ease-in-out  border-2 p-2 bg-gray-800 hover:bg-gray-50 border-gray-700 chat-btn rounded-full"
       >
         <img
