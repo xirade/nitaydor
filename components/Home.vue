@@ -31,21 +31,21 @@
         <section class="relative flex">
           <img
             class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="@/assets/images/nitay.png"
+            src="https://xirade.imgix.net/https%3A%2F%2Fres.cloudinary.com%2Fdxeebmzdv%2Fimage%2Fupload%2Fv1631721290%2Fnitay_upvtvm.png?s=f116eefed5cf1732abc81bba8b583715"
             alt="Nitay Dor"
           />
           <div
-            class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-4 inset-y-1/3 text-right"
+            class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-10 inset-y-1/3 text-right"
           >
-            <h1 class="md:text-8xl text-6xl">ניתאי דור</h1>
+            <h1 class="md:text-8xl sm:text-5xl text-4xl ">ניתאי דור</h1>
             <p class="text-2xl">יועץ נדל''ן</p>
           </div>
         </section>
       </header>
       <main id="about" class="max-w-7xl mx-auto px-4">
         <article class="text-right my-8">
-          <h2 class="text-5xl">קצת על עצמי</h2>
-          <div class="flex lg:flex-row flex-col-reverse mt-12 mb-20">
+          <h2 class="md:text-5xl text-4xl">קצת על עצמי</h2>
+          <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
             <div
               class="relative w-full lg:w-3/4 p-14 text-left text-4xl lg:text-5xl bg-gray-100"
             >
@@ -117,20 +117,32 @@
             alt="building"
           />
         </article>
-        <article id="contact" class="py-5">
+        <article id="contact" class="pb-5">
           <h2 class="text-center text-5xl">נהיה בקשר</h2>
           <form
-            dir="ltr"
+            dir="rtl"
             action="#"
             class="mx-auto w-full md:w-3/4 lg:w-4/6 p-5"
           >
+          <transition name="slide-fade" v-if="success" appear>
+            <div
+              class="p-5 border border-red-400 bg-green-300 text-green-900 flex my-2"
+            >
+              <span class="mr-6">
+                <span class="absolute follows-links successfull"></span>
+              </span>
+              הטופס נשלח בהצלחה!
+            </div>
+          </transition>
             <div class="flex flex-col md:flex-row">
               <div class="flex-1">
                 <div class="p-3">
                   <input
                     class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-500 w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300"
                     type="text"
-                    placeholder="Name"
+                    id="name"
+                    v-model="name"
+                    placeholder="שם"
                     required
                   />
                 </div>
@@ -138,7 +150,9 @@
                   <input
                     class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-500 w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300"
                     type="email"
-                    placeholder="Email"
+                    id="email"
+                    v-model="email"
+                    placeholder="מייל"
                     required
                   />
                 </div>
@@ -146,7 +160,9 @@
                   <input
                     class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-500 w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300"
                     type="tel"
-                    placeholder="Mobile Number"
+                    id="tel"
+                    v-model="tel"
+                    placeholder="מספר טלפון"
                     required
                   />
                 </div>
@@ -154,18 +170,15 @@
               <div class="p-3 flex-1">
                 <textarea
                   class="resize-none border block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-500 w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300 h-56"
-                  placeholder="Message"
+                  placeholder="הודעה"
+                  id="message"
+                  v-model="message"
                   required
                 ></textarea>
               </div>
             </div>
-            <div class="p-3 pt-4 flex items-center justify-between">
-              <button
-                class="font-bold transition duration-500 ease-in-out hover:bg-gray-800 hover:text-gray-50 border-2 border-gray-700 py-3 px-4 text-2xl"
-              >
-                Contact me
-              </button>
-              <div>
+            <div class="p-3 pt-4 flex flex-col-reverse md:flex-row items-center justify-between">
+              <div class="mt-3 md:mt-0">
                 <a
                   target="_blank"
                   href="https://m.facebook.com/nitay.dor"
@@ -199,6 +212,33 @@
                   </svg>
                 </a>
               </div>
+              <button
+                class="flex items-center font-bold transition duration-500 ease-in-out hover:bg-gray-800 hover:text-gray-50 border-2 border-gray-700 py-3 px-4 text-2xl"
+                @click.prevent="send"
+              >
+                <svg
+                  v-if="pending"
+                  class="animate-spin ml-2 h-5 w-5 text-dark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                <span>Contact me</span>
+              </button>
             </div>
           </form>
         </article>
@@ -237,8 +277,14 @@
           </div>
         </nav>
       </footer>
-        <a href="tel:tel:+97252535788" class="block transition duration-500 ease-in-out border-2 p-2 bg-gray-800 hover:bg-gray-50 border-gray-700 chat-btn rounded-full"
-        ><img src="@/assets/images/phone.svg" />
+      <a
+        href="tel:052535788"
+        class="block w-14 h-14 transition duration-500 ease-in-out  border-2 p-2 bg-gray-800 hover:bg-gray-50 border-gray-700 chat-btn rounded-full"
+      >
+        <img
+          class="absolute h-8 w-8 top-2.5 left-2.5"
+          src="@/assets/images/phone.svg"
+        />
       </a>
     </div>
   </transition-group>
@@ -246,7 +292,46 @@
 
 <script>
 export default {
+  data: () => ({
+    name: "",
+    email: "",
+    tel: "",
+    message: "",
+    messages:[],
+    pending: false,
+    success: false
+  }),
   methods: {
+     send() {
+      this.messages = [];
+      this.triggerSendMessageFunction();
+    },
+    async triggerSendMessageFunction() {
+      try {
+        if (this.name && this.email && this.message) {
+          this.pending = true;
+          const response = await this.$axios.$post(
+            "/.netlify/functions/send-contact-email",
+            {
+              contactName: this.name,
+              contactEmail: this.email,
+              message: this.message,
+              phone: this.tel
+            }
+          );
+          this.success = true;
+          setTimeout(() => (this.success = false), 2000);
+          // Reset form field
+          this.name = "";
+          this.email = "";
+          this.message = "";
+          this.pending = false;
+          this.messages.push({ type: "success", text: response });
+        }
+      } catch (error) {
+        this.messages.push({ type: "error", text: error.response.data });
+      }
+    },
     beforeEnter(el) {
       el.style.opacity = 0;
     },
@@ -292,17 +377,27 @@ a:hover svg {
   bottom: 55px;
 }
 
-.chat-btn {
-  width: 45px;
-  height: 45px;
-}
-
-.chat-btn img{
+.chat-btn img {
   filter: brightness(0) invert(1);
 }
 
-.chat-btn:hover img{
+.chat-btn:hover img {
   filter: brightness(0) invert(0);
 }
 
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.successfull {
+  background-image: url("~/assets/images/icon-check-circle.svg");
+}
 </style>

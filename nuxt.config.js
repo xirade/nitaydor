@@ -4,9 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nitay",
+    titleTemplate: "נתאי דור - יועץ נדל''ן",
     htmlAttrs: {
-      lang: "en"
+      lang: "he"
     },
     meta: [
       { charset: "utf-8" },
@@ -52,10 +52,31 @@ export default {
     }
   },
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap"],
 
+  sitemap: {
+    hostname: process.env.HOST_NAME,
+    gzip: true
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: "styles",
+            test: /\.(css|vue)$/,
+            chunks: "all",
+            enforce: true
+          }
+        }
+      }
+    },
+    babel: {
+      compact: true
+    }
+  },
   router: {
     scrollBehavior: async (to, from, savedPosition) => {
       if (savedPosition) {
