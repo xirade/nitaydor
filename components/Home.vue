@@ -356,11 +356,10 @@ q::before {
   position: absolute;
   content: open-quote;
   font-size: 0;
-  left: 15px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  margin-right: 10px;
+  left: 10px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat ;
   background-image: url("@/assets/images/quotes.svg");
 }
 q::after {
