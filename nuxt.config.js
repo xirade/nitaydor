@@ -43,8 +43,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    "nuxt-gsap-module"
+    "nuxt-gsap-module",
+    "@nuxtjs/dotenv"
   ],
+  axios: {
+    baseURL: "/"
+  },
   gsap: {
     extraPlugins: {
       scrollTo: true,
