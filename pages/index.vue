@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       img:
-        "https://xirade.imgix.net/https%3A%2F%2Fres.cloudinary.com%2Fdxeebmzdv%2Fimage%2Fupload%2Fv1631721290%2Fnitay_upvtvm.png?s=f116eefed5cf1732abc81bba8b583715"
+        "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp"
     };
   },
   head() {
@@ -16,7 +16,8 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "האישי שלך לבית חלומותיך"
+          content:
+            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
         },
         {
           hid: "twitter:title",
@@ -26,7 +27,8 @@ export default {
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: "האישי שלך לבית חלומותיך"
+          content:
+            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
         },
         {
           hid: "twitter:image",
@@ -46,7 +48,8 @@ export default {
         {
           hid: "og:description",
           property: "og:description",
-          content: "האישי שלך לבית חלומותיך"
+          content:
+            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
         },
         {
           hid: "og:image:secure_url",
