@@ -44,7 +44,7 @@
       </header>
       <main id="about" class="max-w-7xl mx-auto px-4">
         <article class="text-right my-8">
-          <h2 class="md:text-5xl text-4xl">קצת על עצמי</h2>
+          <h2 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h2>
           <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
             <div
               class="relative w-full lg:w-3/4 p-14 text-left text-4xl lg:text-5xl bg-gray-100"
