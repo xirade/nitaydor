@@ -2,3 +2,18 @@
  command = "npm run generate"
  functions = "functions"
  publish="dist"
+
+ [[plugins]]
+package = "netlify-plugin-no-more-404"
+
+  # all inputs are optional, we just show you the defaults below
+  [plugins.inputs]
+  
+  # either "warn" or "error"
+  on404 = "error" 
+  
+  # change this key to a new one any time you need to restart from scratch
+  cacheKey = "5b8de768283c41a594c96da527944695"
+  
+  # (for development) turn true for extra diagnostic logging
+  debugMode = false

@@ -1,4 +1,6 @@
-# nitay
+# Nitay Dor Nadlan
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6813320f-6bcd-4483-a9ae-bd261436703b/deploy-status)](https://app.netlify.com/sites/nitay-dor/deploys)
 
 ## Build Setup
 
