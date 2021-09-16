@@ -358,6 +358,7 @@ q::before {
   font-size: 0;
   left: 10px;
   width: 40px;
+  height: 40px;
   background-size: contain;
   background-repeat: no-repeat ;
   background-image: url("@/assets/images/quotes.svg");
