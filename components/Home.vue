@@ -228,7 +228,7 @@
                 </a>
                 <a
                   rel="noreferrer"
-                  href="https://wa.me/972525357888"
+                  href="https://bit.ly/3AkvUgK"
                   target="_blank"
                   class="p-3 border-2 border-gray-700 transition duration-500 ease-in-out hover:bg-gray-800 font-semibold text-white inline-flex items-center space-x-2"
                 >
