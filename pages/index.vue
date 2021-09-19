@@ -7,12 +7,38 @@ export default {
   data() {
     return {
       title: "נתאי דור - יועץ נדל''ן",
-      img:
-        "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp"
+        img:
+          "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp",
+      structuredData: {
+          "@context": "http://schema.org",
+          "@type" : "LocalBusiness",
+          "name" : "נתאי דור - יועץ נדל''ן",
+          "image" : `${this.img}`,
+          "telephone" : "+9725357888",
+          "email" : "dornitay@gmail.com",
+          "address" : {
+            "@type" : "PostalAddress",
+            "streetAddress" : "Yahalom St 3, Be'er Ya'akov",
+            "addressLocality" : "באר יעקב",
+            "addressCountry" : "ישראל",
+            "postalCode" : "70300"
+          },
+          "openingHoursSpecification" : {
+            "@type" : "OpeningHoursSpecification",
+            "dayOfWeek" : {
+              "@type" : "DayOfWeek",
+              "name" : "א-ו"
+            },
+            "opens" : "2021-09-19T08:00",
+            "closes" : "2021-09-19T20:00"
+          },
+          "url" : "https://nitaydor-nadlan.com/"
+      },
     };
   },
   head() {
     return {
+      script: [{ type: 'application/ld+json', json: this.structuredData }],
       title: this.title,
       meta: [
         {
