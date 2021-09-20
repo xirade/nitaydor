@@ -39,8 +39,8 @@
           <div
             class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-10 inset-y-1/3 text-right"
           >
-            <h1 class="md:text-8xl sm:text-5xl text-4xl ">ניתאי דור</h1>
-            <h3 class="text-2xl">יועץ נדל''ן</h3>
+            <h1 class="md:text-8xl sm:text-5xl text-4xl ">נתאי דור</h1>
+            <h3 class="text-2xl">יועץ נדל"ן</h3>
           </div>
         </div>
       </header>
