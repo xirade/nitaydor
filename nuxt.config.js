@@ -1,3 +1,4 @@
+import {join} from 'path'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -87,6 +88,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: join(__dirname, 'tailwind.config.js'),
+        'postcss-pxtorem': {
+          propList: ['*', '!border*']
+        }
+      }
+    },
     optimization: {
       splitChunks: {
         cacheGroups: {
