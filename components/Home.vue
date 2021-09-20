@@ -28,7 +28,7 @@
             </div>
           </div>
         </nav>
-        <section class="relative flex">
+        <div class="relative flex">
           <img
             class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src="https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp"
@@ -40,12 +40,13 @@
             class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-10 inset-y-1/3 text-right"
           >
             <h1 class="md:text-8xl sm:text-5xl text-4xl ">ניתאי דור</h1>
-            <p class="text-2xl">יועץ נדל''ן</p>
+            <h3 class="text-2xl">יועץ נדל''ן</h3>
           </div>
-        </section>
+        </div>
       </header>
       <main id="about" class="max-w-7xl mx-auto px-4">
-        <article class="text-right my-8">
+       <article>
+          <section class="text-right my-8">
           <h2 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h2>
           <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
             <div
@@ -56,27 +57,27 @@
                 have today.</q
               >
             </div>
-            <p class="text-xl w-full p-5 text-justify rtl">
-              <span class="text-2xl">
+            <div class="text-xl w-full p-5 text-justify rtl">
+              <h4 class="text-2xl">
                 היי חברים! שמי <strong>נתאי דור</strong> ואני יועץ הנדל"ן ב-
-                <strong>RE/MAX</strong></span
+                <strong>RE/MAX</strong></h4
               >
               <br />
 
-              <span class="block leading-relaxed mt-3">
+              <p class="block leading-relaxed mt-3">
                 אני מזמין אותכם להשתמש בשירותי הסוכנות שלי. אני מתווך נדל"ן, אני
                 מחזיק את האצבע על הדופק של שוק הנדל"ן ויודע הכל על הנדל"ן
-                בישראל. הצוות שלי כולל מומחים ברמה גבוהה: מומחי נדל"ן, עורכי
+                בבאר יעקב ובישראל. הצוות שלי כולל מומחים ברמה גבוהה: מומחי נדל"ן, עורכי
                 דין, ויועצי משכנתאות. אנו מעריכים כל אחד מלקוחותינו ועושים כמיטב
                 יכולתנו לעמוד בציפיותיך. אני באופן אישי שולט בתהליכי העבודה
                 ומבטיח כי תקבל שירות מעולה באנרגיות חיוביות משיתוף פעולה איתנו.
                 אתה יכול להיות בטוח שכל העסקאות עם הנדל"ן שלך יבוצעו בבטחה, בזמן
-                וברמה מקצועית גבוהה.</span
+                וברמה מקצועית גבוהה.</p
               >
-            </p>
+            </div>
           </div>
-        </article>
-        <article class="my-8">
+        </section>
+        <section class="my-8">
           <img
             class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
@@ -88,7 +89,7 @@
             class="bg-gray-100 flex lg:flex-row flex-col items-start p-3 my-5"
           >
             <div class="p-5">
-              <h3 class="text-2xl font-bold mb-4">למה לבחור דווקא בי ?</h3>
+              <h2 class="text-2xl font-bold mb-4">למה לבחור דווקא בי ?</h2>
               <ul class="list-disc text-xl text-justify leading-relaxed">
                 <li class="mb-3">
                   נדל"ן דורש לא רק את האפשרות למצוא לקוחות או חפץ, אלא גם ללוות
@@ -124,8 +125,9 @@
             width="967"
             height="725"
           />
-        </article>
-        <article id="contact" class="pb-5">
+        </section>
+       </article>
+        <section id="contact" class="pb-5">
           <h2 class="text-center text-5xl">נהיה בקשר</h2>
           <form
             dir="rtl"
@@ -280,7 +282,7 @@
               </button>
             </div>
           </form>
-        </article>
+        </section>
       </main>
       <footer>
         <nav dir="ltr" class="z-10 pb-8 sm:py-0 bg-gray-100">

@@ -3,42 +3,45 @@
 </template>
 
 <script>
+const img =
+  "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp";
 export default {
   data() {
     return {
-      title: "נתאי דור - יועץ נדל''ן",
-        img:
-          "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp",
+      title: "נתאי דור - יועץ נדלן איש שלך לבית חלומותך",
+      description:
+        "התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה בבאר יעקב או בסביבה כל המידע לו זקוק יועץ הנדלן",
       structuredData: {
-          "@context": "http://schema.org",
-          "@type" : "LocalBusiness",
-          "name" : "נתאי דור - יועץ נדל''ן",
-          "image" : `${this.img}`,
-          "telephone" : "+9725357888",
-          "email" : "dornitay@gmail.com",
-          "address" : {
-            "@type" : "PostalAddress",
-            "streetAddress" : "Yahalom St 3, Be'er Ya'akov",
-            "addressLocality" : "באר יעקב",
-            "addressCountry" : "ישראל",
-            "postalCode" : "70300"
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        name: "נתאי דור",
+        image: img,
+        telephone: "+9725357888",
+        email: "dornitay@gmail.com",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Yahalom St 3, Be'er Ya'akov",
+          addressLocality: "באר יעקב",
+          addressCountry: "ישראל",
+          postalCode: "70300"
+        },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: {
+            "@type": "DayOfWeek",
+            name:
+              "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, PublicHolidays"
           },
-          "openingHoursSpecification" : {
-            "@type" : "OpeningHoursSpecification",
-            "dayOfWeek" : {
-              "@type" : "DayOfWeek",
-              "name" : "א-ו"
-            },
-            "opens" : "2021-09-19T08:00",
-            "closes" : "2021-09-19T20:00"
-          },
-          "url" : "https://nitaydor-nadlan.com/"
-      },
+          opens: "2021-09-19T08:00",
+          closes: "2021-09-19T20:00"
+        },
+        url: "https://nitaydor-nadlan.com/"
+      }
     };
   },
   head() {
     return {
-      script: [{ type: 'application/ld+json', json: this.structuredData }],
+      script: [{ type: "application/ld+json", json: this.structuredData }],
       title: this.title,
       meta: [
         {
@@ -50,7 +53,7 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
+            this.description
         },
         {
           hid: "twitter:card",
@@ -60,49 +63,47 @@ export default {
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: "נתאי דור - יועץ נדל''ן"
+          content: this.title
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content:
-            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
+          content: this.description
         },
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: this.img
+          content: img
         },
         {
           hid: "twitter:image:alt",
           name: "twitter:image:alt",
-          content: "נתאי דור - יועץ נדל''ן"
+          content: this.title
         },
         {
           hid: "og:title",
           property: "og:title",
-          content: "נתאי דור - יועץ נדל''ן"
+          content: this.title
         },
         {
           hid: "og:description",
           property: "og:description",
-          content:
-            "האיש שלך לבית חלומותך! התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית, אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי רכישה/ מכירה."
+          content: this.description
         },
         {
           hid: "og:image:secure_url",
           property: "og:image:secure_url",
-          content: this.img
+          content: img
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.img
+          content: img
         },
         {
           hid: "og:image:alt",
           property: "og:image:alt",
-          content: "נתאי דור - יועץ נדל''ן"
+          content: this.title
         },
         {
           hid: "og:image:width",
@@ -132,7 +133,7 @@ export default {
         {
           hid: "og:site_name",
           property: "og:site_name",
-          content: "נתאי דור - יועץ נדל''ן"
+          content: this.title
         },
         {
           hid: "og:url",
