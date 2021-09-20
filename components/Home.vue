@@ -24,7 +24,7 @@
                   >Home</a
                 >
               </div>
-              <span class="text-2xl text-gray-900 font-bold">ND</span>
+              <a href="/" class="text-2xl text-gray-900 font-bold">ND</a>
             </div>
           </div>
         </nav>
@@ -32,7 +32,7 @@
           <img
             class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src="https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp"
-            alt="Nitay Dor"
+            alt="נתאי דור"
             width="1511"
             height="800"
           />
@@ -40,93 +40,105 @@
             class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-10 inset-y-1/3 text-right"
           >
             <h1 class="md:text-8xl sm:text-5xl text-4xl ">נתאי דור</h1>
-            <h3 class="text-2xl">יועץ נדל"ן</h3>
+            <h3 class="text-2xl">יועץ נדל''ן</h3>
           </div>
         </div>
       </header>
       <main id="about" class="max-w-7xl mx-auto px-4">
-       <article>
+        <article>
           <section class="text-right my-8">
-          <h2 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h2>
-          <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
-            <div
-              class="relative w-full lg:w-3/4 p-14 text-left text-4xl lg:text-5xl bg-gray-100"
-            >
-              <q dir="ltr">
-                The house of the future won't just be better than the house you
-                have today.</q
+            <h2 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h2>
+            <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
+              <div
+                class="relative w-full lg:w-3/4 p-14 text-left text-4xl lg:text-5xl bg-gray-100"
               >
-            </div>
-            <div class="text-xl w-full p-5 text-justify rtl">
-              <h4 class="text-2xl">
-                היי חברים! שמי <strong>נתאי דור</strong> ואני יועץ הנדל"ן ב-
-                <strong>RE/MAX</strong></h4
-              >
-              <br />
+                <q dir="ltr">
+                  The house of the future won't just be better than the house
+                  you have today.</q
+                >
+              </div>
+              <div class="text-xl w-full p-5 text-justify rtl">
+                <h4 class="text-2xl">
+                  היי חברים! שמי <strong>נתאי דור</strong> ואני יועץ הנדל''ן ב-
+                  <strong>RE/MAX</strong>
+                </h4>
+                <br />
 
-              <p class="block leading-relaxed mt-3">
-                אני מזמין אותכם להשתמש בשירותי הסוכנות שלי. אני מתווך נדל"ן, אני
-                מחזיק את האצבע על הדופק של שוק הנדל"ן ויודע הכל על הנדל"ן
-                בבאר יעקב ובישראל. הצוות שלי כולל מומחים ברמה גבוהה: מומחי נדל"ן, עורכי
-                דין, ויועצי משכנתאות. אנו מעריכים כל אחד מלקוחותינו ועושים כמיטב
-                יכולתנו לעמוד בציפיותיך. אני באופן אישי שולט בתהליכי העבודה
-                ומבטיח כי תקבל שירות מעולה באנרגיות חיוביות משיתוף פעולה איתנו.
-                אתה יכול להיות בטוח שכל העסקאות עם הנדל"ן שלך יבוצעו בבטחה, בזמן
-                וברמה מקצועית גבוהה.</p
-              >
+                <p class="block leading-relaxed">
+                  אני מזמין אותכם להשתמש בשירותי הסוכנות שלי. אני מתווך נדל''ן,
+                  אני מחזיק את האצבע על הדופק של שוק הנדל''ן ויודע הכל על
+                  הנדל''ן בבאר יעקב ובישראל. הצוות שלי כולל מומחים ברמה גבוהה:
+                  מומחי נדל''ן, עורכי דין, ויועצי משכנתאות. אנו מעריכים כל אחד
+                  מלקוחותינו ועושים כמיטב יכולתנו לעמוד בציפיותיך. אני באופן
+                  אישי שולט בתהליכי העבודה ומבטיח כי תקבל שירות מעולה באנרגיות
+                  חיוביות משיתוף פעולה איתנו. אתה יכול להיות בטוח שכל העסקאות עם
+                  הנדל''ן שלך יבוצעו בבטחה, בזמן וברמה מקצועית גבוהה.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="my-8">
-          <img
-            class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-            alt="building"
-            width="1050"
-            height="700"
-          />
-          <div
-            class="bg-gray-100 flex lg:flex-row flex-col items-start p-3 my-5"
-          >
-            <div class="p-5">
-              <h2 class="text-2xl font-bold mb-4">למה לבחור דווקא בי ?</h2>
-              <ul class="list-disc text-xl text-justify leading-relaxed">
-                <li class="mb-3">
-                  נדל"ן דורש לא רק את האפשרות למצוא לקוחות או חפץ, אלא גם ללוות
-                  את העסקה. בממוצע, לקוחותיי מקבלים הצעות שהן רווחיות ב -10%
-                  מהשוק, מכיוון שאני משתלט על תהליך המשא ומתן. אין משימה כזו
-                  בשבילי שאני לא מוכן לקחת על עצמי.
-                </li>
-                <li class="mb-3">
-                  נדל"ן יוקרתי, נדל"ן מסחרי, מכירת או קניית דירה, השכרה - כל אלה
-                  אתגרים מעניינים. הדבר החשוב ביותר הוא שעל ידי פתרון בעיות אלה,
-                  אני מבטיח שכל הצדדים יהיו מרוצים.
-                </li>
-                <li>
-                  התמחות בבתי מגורים, ניתוח סביבה קהילתית להתאמה אישית ניתוח
-                  אפיון והתאמה של הנכס בהתאם למיקומו ואומדנו ליווי אישי בתהליכי
-                  רכישה/מכירה הגדלת פוטנציאל החשיפה למעגל לקוחות רחב בעל ידע רחב
-                  בתכניות מתאר עתידיות באזור מגוריך.
-                </li>
-              </ul>
+          </section>
+          <section class="my-8">
+            <img
+              class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+              src="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+              alt="building"
+              width="1050"
+              height="700"
+            />
+            <div
+              class="bg-gray-100 flex lg:flex-row flex-col items-start p-3 my-5"
+            >
+              <div class="p-5">
+                <h2 class="text-2xl font-bold mb-4">למה לבחור דווקא בי ?</h2>
+                <ul
+                  class="list-disc text-xl text-justify space-y-6 leading-relaxed"
+                >
+                  <li>
+                    נדל''ן דורש לא רק את האפשרות למצוא לקוחות או חפץ, אלא גם
+                    ללוות את העסקה. בממוצע, לקוחותיי מקבלים הצעות שהן רווחיות ב
+                    <strong class="font-semibold"> -10% מהשוק</strong>, מכיוון
+                    שאני משתלט על תהליך המשא ומתן. אין משימה כזו בשבילי שאני לא
+                    מוכן לקחת על עצמי.
+                  </li>
+                  <li>
+                    נדל''ן יוקרתי, נדל''ן מסחרי, מכירת או קניית דירה, השכרה - כל
+                    אלה אתגרים מעניינים. הדבר החשוב ביותר הוא שעל ידי פתרון
+                    בעיות אלה, אני מבטיח שכל הצדדים יהיו מרוצים.
+                  </li>
+                  <li>
+                    תוכנית שיווק מפותחת עם חישוב מדויק של המחיר המקסימלי ומסגרת
+                    הזמן הנדרשת. הגדלת פוטנציאל החשיפה למעגל לקוחות רחב בעל ידע
+                    רחב בתכניות מתאר עתידיות באזור מגוריך.
+                  </li>
+                  <li>
+                    משעות הבוקר המוקדמות ועד שעות הלילה המאוחרות יועץ נדל''ן
+                    בקשר עם לקוחות,<strong class="font-semibold">
+                      7 ימים בשבוע</strong
+                    >. תמיד ובכל מקום בזמן, בלי תירוצים לגבי "פקקים בתל אביב".
+                  </li>
+                  <li>
+                    לפני כל עסקת נדל''ן, כל הפרטים מוסכמים מראש בין כל המשתתפים
+                    בצורה אלקטרונית. עסקאות מתבצעות באווירה חיובית ועסקית.
+                  </li>
+                </ul>
+              </div>
+              <img
+                class="w-full lg:h-full h-96 sm:h-84 object-contain"
+                src="@/assets/images/license.webp"
+                alt="license"
+                width="331"
+                height="486"
+              />
             </div>
             <img
-              class="w-full lg:h-full h-96 sm:h-84 object-contain"
-              src="@/assets/images/license.webp"
-              alt="license"
-              width="331"
-              height="486"
+              class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full mb-8"
+              src="https://images.unsplash.com/photo-1579725942955-4d8377f8c66a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+              alt="flat"
+              width="967"
+              height="725"
             />
-          </div>
-          <img
-            class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full mb-8"
-            src="https://images.unsplash.com/photo-1579725942955-4d8377f8c66a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
-            alt="flat"
-            width="967"
-            height="725"
-          />
-        </section>
-       </article>
+          </section>
+        </article>
         <section id="contact" class="pb-5">
           <h2 class="text-center text-5xl">נהיה בקשר</h2>
           <form
@@ -191,7 +203,9 @@
               class="p-3 pt-4 flex flex-col-reverse md:flex-row md:items-end items-center justify-between"
             >
               <div class="mt-3 md:mt-0">
-                <h4 dir="ltr" class="text-center font-semibold">Social links:</h4>
+                <h4 dir="rtl" class="text-center font-semibold">
+                  קישורים חברתיים:
+                </h4>
                 <a
                   target="_blank"
                   rel="noreferrer"
