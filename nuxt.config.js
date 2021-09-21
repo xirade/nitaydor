@@ -1,4 +1,4 @@
-import {join} from 'path'
+import { join } from "path";
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -50,7 +50,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: "~/plugins/vue-gtag" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -60,15 +60,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "nuxt-gsap-module",
-    "@nuxtjs/dotenv",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/dotenv"
   ],
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-    autoTracking: {
-      screenview: true
-    } // Use as fallback if no runtime config is provided
-  },
   axios: {
     baseURL: "/"
   },
@@ -90,9 +83,9 @@ export default {
     extractCSS: true,
     postcss: {
       plugins: {
-        tailwindcss: join(__dirname, 'tailwind.config.js'),
-        'postcss-pxtorem': {
-          propList: ['*', '!border*']
+        tailwindcss: join(__dirname, "tailwind.config.js"),
+        "postcss-pxtorem": {
+          propList: ["*", "!border*"]
         }
       }
     },
