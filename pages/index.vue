@@ -4,7 +4,7 @@
 
 <script>
 const img =
-  "https://res.cloudinary.com/dxeebmzdv/image/upload/q_auto:good/v1631721290/nitay_upvtvm.webp";
+  "https://res.cloudinary.com/dxeebmzdv/image/upload/v1631827246/nitay-min_me2add.png";
 export default {
   data() {
     return {
