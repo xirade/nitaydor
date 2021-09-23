@@ -107,12 +107,12 @@ export default {
         {
           hid: "og:image:width",
           property: "og:image:width",
-          content: "1920"
+          content: "1670"
         },
         {
           hid: "og:image:height",
           property: "og:image:alt",
-          content: "1012"
+          content: "835"
         },
         {
           hid: "og:image:type",
