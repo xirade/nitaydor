@@ -6,12 +6,12 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     htmlAttrs: {
-      lang: "he"
+      lang: "he",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "format-detection", content: "telephone=no" }
+      { name: "format-detection", content: "telephone=no" },
     ],
     link: [
       { rel: "shortcut icon", href: "/favicon.ico" },
@@ -19,24 +19,26 @@ export default {
       {
         rel: "preconnect",
         href: "https://fonts.gstatic.com",
-        crossorigin: "Access-Control-Allow-Origin"
+        crossorigin: "Access-Control-Allow-Origin",
       },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap"
-      }
-    ]
+        href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/gtag.client.js", mode: 'client' }],
-  
+  plugins: [
+    { src: "~/plugins/gtag.client.js", mode: "client" },
+    { src: "~/plugins/vue-lazyload.js"},
+  ],
+
   publicRuntimeConfig: {
-    googleApiId: process.env.GOOGLE_ANALYTICS_ID
+    googleApiId: process.env.GOOGLE_ANALYTICS_ID,
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -47,23 +49,23 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "nuxt-gsap-module",
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
   ],
   axios: {
-    baseURL: "/"
+    baseURL: "/",
   },
   gsap: {
     extraPlugins: {
       scrollTo: true,
-      scrollTrigger: true
-    }
+      scrollTrigger: true,
+    },
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/axios", "@nuxtjs/sitemap"],
 
   sitemap: {
     hostname: process.env.HOST_NAME,
-    gzip: true
+    gzip: true,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -72,9 +74,9 @@ export default {
       plugins: {
         tailwindcss: join(__dirname, "tailwind.config.js"),
         "postcss-pxtorem": {
-          propList: ["*", "!border*"]
-        }
-      }
+          propList: ["*", "!border*"],
+        },
+      },
     },
     optimization: {
       splitChunks: {
@@ -83,14 +85,14 @@ export default {
             name: "styles",
             test: /\.(css|vue)$/,
             chunks: "all",
-            enforce: true
-          }
-        }
-      }
+            enforce: true,
+          },
+        },
+      },
     },
     babel: {
-      compact: true
-    }
+      compact: true,
+    },
   },
   router: {
     scrollBehavior: async (to, from, savedPosition) => {
@@ -122,6 +124,6 @@ export default {
       }
 
       return { x: 0, y: 0 };
-    }
-  }
+    },
+  },
 };

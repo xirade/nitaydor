@@ -1,5 +1,5 @@
 <template>
-  <transition-group tag="div" appear @before-enter="beforeEnter" @enter="enter">
+  <div>
     <div key="div" class="font-rubik bg-gray-50">
       <header>
         <nav class="sticky top-0 z-10 bg-gray-100">
@@ -9,12 +9,12 @@
                 class="flex items-center space-s-6 text-gray-900 font-medium"
               >
                 <a
-                  class="transition duration-500 ease-in-out hover:text-gray-500 "
+                  class="transition duration-500 ease-in-out hover:text-gray-500"
                   href="#contact"
                   >Contacts</a
                 >
                 <a
-                  class="transition duration-500 ease-in-out hover:text-gray-500 "
+                  class="transition duration-500 ease-in-out hover:text-gray-500"
                   href="#about"
                   >About</a
                 >
@@ -39,15 +39,15 @@
           <div
             class="absolute xl:left-1/4 lg:left-40 sm:left-14 left-10 inset-y-1/3 text-right"
           >
-            <h1 class="md:text-8xl sm:text-5xl text-4xl ">נתאי דור</h1>
-            <h3 class="text-2xl">יועץ נדל''ן</h3>
+            <h1 class="md:text-8xl sm:text-5xl text-4xl">נתאי דור</h1>
+            <h2 class="text-2xl">יועץ נדל''ן</h2>
           </div>
         </div>
       </header>
       <main id="about" class="max-w-7xl mx-auto px-4">
         <article>
           <section class="text-right my-8">
-            <h2 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h2>
+            <h3 class="md:text-5xl text-4xl mr-5">קצת על עצמי</h3>
             <div class="flex lg:flex-row flex-col-reverse mt-4 mb-20">
               <div
                 class="relative w-full lg:w-3/4 p-14 text-left text-4xl lg:text-5xl bg-gray-100"
@@ -130,13 +130,11 @@
                 height="486"
               />
             </div>
-            <img
-              class="w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full mb-8"
-              src="https://images.unsplash.com/photo-1579725942955-4d8377f8c66a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
-              alt="flat"
-              width="967"
-              height="725"
-            />
+            <div class="p-3 my-5">
+              <h2 class="text-2xl font-bold mb-4">הנכסים בשיווק בבאר יעקב</h2>
+              <!-- SLIDER -->
+              <Slider />
+            </div>
           </section>
         </article>
         <section id="contact" class="pb-5">
@@ -312,23 +310,23 @@
               </p>
               <div class="flex space-s-6 py-3 text-gray-900 font-medium">
                 <a
-                  class="transition duration-500 ease-in-out hover:text-gray-500 "
+                  class="transition duration-500 ease-in-out hover:text-gray-500"
                   href="#"
                   >Home</a
                 >
                 <a
-                  class="transition duration-500 ease-in-out hover:text-gray-500 "
+                  class="transition duration-500 ease-in-out hover:text-gray-500"
                   href="#about"
                   >About</a
                 >
                 <a
-                  class="transition duration-500 ease-in-out hover:text-gray-500 "
+                  class="transition duration-500 ease-in-out hover:text-gray-500"
                   href="#contact"
                   >Contact</a
                 >
               </div>
               <p class="font-semibold">
-                © 2021 Nitay Dor
+                © {{ new Date().getFullYear() }} Nitay Dor
               </p>
             </div>
           </div>
@@ -336,7 +334,7 @@
       </footer>
       <a
         href="tel:0525357888"
-        class="block w-14 h-14 transition duration-500 ease-in-out  border-2 bg-gray-800 hover:bg-gray-50 border-gray-700 chat-btn rounded-full"
+        class="block w-14 h-14 transition duration-500 ease-in-out border-2 bg-gray-800 hover:bg-gray-50 border-gray-700 chat-btn rounded-full"
       >
         <img
           class="absolute h-8 w-8 top-2.5 left-2.5"
@@ -345,19 +343,23 @@
         />
       </a>
     </div>
-  </transition-group>
+  </div>
 </template>
 
 <script>
+import { generateSlides } from "../utils/generateSlides";
+import Slider from "./Slider.vue";
 export default {
+  components: { Slider },
   data: () => ({
+    slides: generateSlides,
     name: "",
     email: "",
     tel: "",
     message: "",
     messages: [],
     pending: false,
-    success: false
+    success: false,
   }),
   methods: {
     send() {
@@ -374,7 +376,7 @@ export default {
               contactName: this.name,
               contactEmail: this.email,
               message: this.message,
-              phone: this.tel
+              phone: this.tel,
             }
           );
           this.success = true;
@@ -390,19 +392,7 @@ export default {
         this.messages.push({ type: "error", text: error.response.data });
       }
     },
-    beforeEnter(el) {
-      el.style.opacity = 0;
-    },
-    enter(el, done) {
-      const gsap = this.$gsap;
-
-      gsap.to(el, {
-        opacity: 1,
-        duration: 2,
-        onComplete: done
-      });
-    }
-  }
+  },
 };
 </script>
 

@@ -12,7 +12,10 @@ module.exports = {
     extend: {
       fontFamily: {
         'rubik': ['"Rubik"', "sans-serif"]
-      }
+      },
+      height: {
+        "108": "42rem",
+      },
     }
   },
   variants: {
